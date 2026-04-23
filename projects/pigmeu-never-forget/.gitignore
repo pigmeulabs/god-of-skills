@@ -1,0 +1,27 @@
+
+# BEGIN: global-hidden-and-env-guard
+# Ignore hidden files/folders by default (safety for accidental secrets)
+.*
+
+# Keep essential repository metadata
+!.gitignore
+!.gitattributes
+!.gitmodules
+!.github/
+!.github/**
+!.env.example
+!.env.*.example
+
+# Modules / libs / environments
+node_modules/
+vendor/
+lib/
+libs/
+.venv/
+venv/
+ENV/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+# END: global-hidden-and-env-guard

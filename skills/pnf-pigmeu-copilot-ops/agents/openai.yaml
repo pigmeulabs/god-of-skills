@@ -1,0 +1,4 @@
+interface:
+  display_name: "PNF Pigmeu Copilot Ops"
+  short_description: "Automatiza ingestão e consulta do pigmeu-copilot."
+  default_prompt: "Use esta skill para bootstrap, sync, search, ask e stats do pigmeu-copilot com pigmeu-never-forget."

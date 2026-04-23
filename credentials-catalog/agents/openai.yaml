@@ -1,0 +1,3 @@
+interface:
+  display_name: "Credentials Catalog"
+  short_description: "Consulta e gerencia credenciais em /home/chico/projects/.globals/credentials.yaml com matching por nome/campos, confirmacao para escrita e validacao de seguranca"

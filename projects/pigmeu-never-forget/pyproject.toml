@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pigmeu-never-forget"
+version = "0.1.0"
+description = "Local-first multi-project RAG foundation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML>=6.0",
+  "markdownify>=0.13.1",
+  "pypdf>=4.2.0",
+  "python-docx>=1.1.2",
+  "Pillow>=10.0.0",
+  "qdrant-client>=1.10.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+mcp = [
+  "mcp>=1.0.0",
+]
+api = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+]
+
+[project.scripts]
+pnf = "pigmeu_never_forget.cli:main"
+pnf-mcp = "pigmeu_never_forget.mcp.server:run_stdio_server"
+pnf-api = "pigmeu_never_forget.http.server:run_http_server"
+pnf-session = "pigmeu_never_forget.session_memory.cli:main"
+pnf-session-mcp = "pigmeu_never_forget.session_memory.server:run_stdio_server"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

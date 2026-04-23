@@ -1,0 +1,49 @@
+flowchart TD
+    A["Start"] --> B["Load workspace config"]
+    B --> C["Discover projects (immediate children)"]
+    C --> D{"Valid project dir?"}
+    D -- "No" --> C
+    D -- "Yes" --> E["Build ProjectContext + ensure .rag"]
+    E --> F["Bootstrap state.db + memory.db + registry"]
+
+    F --> G["IngestionService: discover eligible files"]
+    G --> H["Normalize to Markdown (markdownify)"]
+    H --> I["Build snapshots: source_hash + content_hash + parser_version"]
+    I --> J["Diff engine: new / modified / unchanged / deleted / renamed"]
+
+    J --> K{"Deleted?"}
+    K -- "Yes" --> K1["Deactivate docs/chunks + remove vectors"]
+    K -- "No" --> L
+    K1 --> L["Indexing candidates: new + modified + renamed(new path)"]
+
+    L --> M["AnalysisService: heuristic doc analysis"]
+    M --> N["ChunkingService: heading/paragraph + overlap"]
+    N --> O["EmbeddingService: deterministic vectors (stage 3)"]
+    O --> P["VectorStoreService: upsert local mirror"]
+    P --> Q["Persist documents/chunks in SQLite"]
+    Q --> R["Checkpoint persistence (skip failed paths)"]
+    R --> S["Mark old path deleted on successful rename"]
+
+    S --> T{"Query?"}
+    T -- "No" --> U["Wait for next sync/event"]
+    T -- "Yes" --> V["RetrievalService (pending stage 5)"]
+    V --> W["AnswerService (pending stage 5)"]
+    W --> U
+
+    U --> T
+
+    subgraph F1["Implemented Functionalities (Stages 0-3)"]
+      X1["Workspace/Project bootstrap"]
+      X2["SQLite migrations + jobs + locks"]
+      X3["Incremental ingestion + rename handling"]
+      X4["Chunking + embedding + local vector search"]
+      X5["Regression tests (15 passed)"]
+    end
+
+    subgraph F2["Planned Next Functionalities (Stages 4+)"]
+      Y1["Memory facts + project summaries"]
+      Y2["Summary-first retrieval pipeline"]
+      Y3["Grounded answer generation"]
+      Y4["AutoDream-like consolidation"]
+      Y5["HTTP API + MCP adapters"]
+    end

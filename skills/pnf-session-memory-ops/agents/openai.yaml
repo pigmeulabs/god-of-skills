@@ -1,0 +1,4 @@
+interface:
+  display_name: "PNF Session Memory Ops"
+  short_description: "Persiste e arquiva sessoes do OpenCode."
+  default_prompt: "Use esta skill para manter docs/memories/sessions atualizados, registrar turnos, finalizar sessoes e arquivar a memoria no pigmeu-never-forget."
