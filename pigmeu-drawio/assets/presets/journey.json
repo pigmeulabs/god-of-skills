@@ -1,0 +1,20 @@
+{
+  "name": "journey",
+  "fontFamily": "Architects Daughter",
+  "fontSize": 14,
+  "grid": 10,
+  "spacing": {"shape": 50, "containerMargin": 40, "edgeClearance": 24},
+  "colors": {
+    "stroke": "#36393d",
+    "fill": "#eeeeee",
+    "font": "#1a1a1a",
+    "accent": "#cce5ff",
+    "muted": "#ffff88",
+    "risk": "#ffcccc",
+    "success": "#33ff99"
+  },
+  "styleDefaults": {
+    "shape": "rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;strokeColor=#36393d;fillColor=#eeeeee;fontColor=#1a1a1a;strokeWidth=2;sketch=1;shadow=1;",
+    "edge": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;strokeColor=#36393d;fontColor=#1a1a1a;strokeWidth=2;sketch=1;endArrow=classic;"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "id": "uml-class-basic",
+      "prompt": "create a UML class diagram for users, roles, permissions",
+      "expect": ["classes", "associations", "valid xml", "source drawio"]
+    },
+    {
+      "id": "bpmn-approval",
+      "prompt": "create BPMN for purchase approval with rejection path and export PNG",
+      "expect": [
+        "start",
+        "end",
+        "gateway",
+        "labeled branches",
+        "bpmn components",
+        "png export command"
+      ]
+    },
+    {
+      "id": "flowchart-validation",
+      "prompt": "create a flowchart for registration validation with notes and export png",
+      "expect": ["decision diamonds", "yes/no labels", "semantic color usage", "png artifact"]
+    },
+    {
+      "id": "mindmap-mvp",
+      "prompt": "create a mind map for ecommerce MVP scope",
+      "expect": ["central topic", "branches", "short labels", "readable spacing"]
+    },
+    {
+      "id": "wireframe-dashboard",
+      "prompt": "create a web dashboard wireframe with primary and cancel actions and export png",
+      "expect": [
+        "header",
+        "sidebar",
+        "content",
+        "actions",
+        "wireframe widgets",
+        "png export command"
+      ]
+    },
+    {
+      "id": "component-style-consistency",
+      "prompt": "generate a process diagram using the component reference visual language",
+      "expect": [
+        "Architects Daughter font",
+        "sketch style",
+        "semantic palette",
+        "component family selection"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+interface:
+  display_name: Pigmeu Drawio
+  short_description: Create, validate, preview, and export draw.io diagrams for UML,
+    BPMN, flowcharts, mind maps, and wireframes.
+  icon: diagram
+  accent_color: '#4f46e5'
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

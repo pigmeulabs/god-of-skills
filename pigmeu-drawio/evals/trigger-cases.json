@@ -1,0 +1,21 @@
+{
+  "should_trigger": [
+    "crie um diagrama UML de casos de uso para o sistema de login",
+    "gere um sequence diagram em draw.io para o checkout",
+    "modele este processo em BPMN",
+    "crie um fluxograma da validação de cadastro",
+    "faça um mapa mental dos requisitos do MVP",
+    "crie um wireframe mobile da tela de login",
+    "transforme estes requisitos em um diagrama draw.io",
+    "edite este arquivo .drawio e reorganize o layout",
+    "exporte este diagrama para SVG",
+    "valide se este XML draw.io está correto"
+  ],
+  "should_not_trigger": [
+    "busque ícones AWS para Lambda",
+    "crie uma arquitetura Kubernetes com ícones oficiais",
+    "liste serviços da Azure",
+    "explique UML sem criar diagrama",
+    "escreva documentação textual sem visual"
+  ]
+}

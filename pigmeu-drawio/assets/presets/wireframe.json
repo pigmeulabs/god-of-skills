@@ -1,0 +1,23 @@
+{
+  "name": "wireframe",
+  "fontFamily": "Architects Daughter",
+  "fontSize": 16,
+  "grid": 10,
+  "spacing": {"shape": 40, "containerMargin": 30, "edgeClearance": 20},
+  "colors": {
+    "stroke": "#36393d",
+    "fill": "#ffffff",
+    "font": "#333333",
+    "accent": "#0085FC",
+    "neutral": "#eeeeee",
+    "danger": "#ff0000",
+    "success": "#33ff99"
+  },
+  "styleDefaults": {
+    "shape": "rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;fillColor=#ffffff;fontColor=#333333;strokeWidth=2;sketch=1;fillWeight=0;hachureGap=0;hachureAngle=-49;jiggle=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;shadow=1;",
+    "buttonPrimary": "rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=13;fillColor=#0085FC;strokeColor=#36393d;fontColor=#FFFFFF;strokeWidth=1;sketch=1;hachureGap=4;jiggle=0.4;fillWeight=-1;align=center;verticalAlign=middle;shadow=1;",
+    "buttonDanger": "rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=13;fillColor=#FF0000;strokeColor=#000000;fontColor=#FFFFFF;strokeWidth=1;sketch=1;hachureGap=4;jiggle=0.4;fillWeight=-1;align=center;verticalAlign=middle;shadow=1;",
+    "input": "rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=12;fillColor=#ffffff;strokeColor=#36393d;fontColor=#333333;strokeWidth=2;sketch=1;hachureGap=0;hachureAngle=-49;jiggle=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;",
+    "edge": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;strokeColor=#36393d;fontColor=#333333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=1;endArrow=classic;endFill=1;"
+  }
+}

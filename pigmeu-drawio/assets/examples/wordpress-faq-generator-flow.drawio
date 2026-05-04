@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="wordpress-faq-generator-flow" name="wordpress-faq-generator-flow">
+    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Fluxo da skill wordpress-faq-generator" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=26;fontStyle=1;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1.2;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="420" y="30" width="760" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="Receber entrada&lt;br&gt;post_id, slug, URL ou raw content" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="140" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="config" value="Carregar config/env&lt;br&gt;inicializar tracking CSV" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#eeeeee;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="270" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fetch" value="Buscar post&lt;br&gt;WordPress REST API ou raw-content" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="400" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="detect" value="FAQ ja existe?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#ffff88;sketch=1;fillWeight=2;hachureGap=4;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="690" y="540" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="skip-existing" value="Registrar skipped_existing_faq&lt;br&gt;e encerrar sem update" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#000000;strokeWidth=2;fillColor=#ffcccc;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="565" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="backup" value="Criar backup JSON completo" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#eeeeee;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="730" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sanitize" value="Sanitizar conteudo&lt;br&gt;gerar markdown base" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#eeeeee;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="850" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="context" value="Gerar contexto markdown&lt;br&gt;por agente IA usando prompts" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="980" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="context-file" value="--context-file existe?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#ffff88;sketch=1;fillWeight=2;hachureGap=4;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1120" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fail-context" value="Registrar failed&lt;br&gt;parar: contexto obrigatorio" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#000000;strokeWidth=2;fillColor=#ffcccc;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1145" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="generate" value="Gerar FAQ&lt;br&gt;faq_generator.py + prompt salvo" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1145" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" value="Validar FAQ&lt;br&gt;precheck local + modelo" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#eeeeee;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="240" y="980" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="approved" value="FAQ aprovada?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#ffff88;sketch=1;fillWeight=2;hachureGap=4;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="310" y="800" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rejected" value="Registrar faq_rejected&lt;br&gt;e encerrar sem update" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#000000;strokeWidth=2;fillColor=#ffcccc;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="825" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="html" value="Construir HTML visivel&lt;br&gt;faq_content_builder.py" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="240" y="650" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mode" value="Modo update-draft?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#ffff88;sketch=1;fillWeight=2;hachureGap=4;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="310" y="470" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="dry-run" value="dry-run&lt;br&gt;gerar preview HTML&lt;br&gt;sem alterar WordPress" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#eeeeee;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="495" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="refetch" value="Re-fetch post&lt;br&gt;re-check conflito de FAQ" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="240" y="310" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="conflict" value="Conflito detectado?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#ffff88;sketch=1;fillWeight=2;hachureGap=4;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="310" y="130" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fail-conflict" value="Registrar failed&lt;br&gt;parar: conflito no re-check" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#000000;strokeWidth=2;fillColor=#ffcccc;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="155" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="update" value="Atualizar post como draft&lt;br&gt;nunca publicar direto" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#006633;strokeWidth=2;fillColor=#00FF00;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="170" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tracking" value="Tracking CSV registra cada gate e saida" style="shape=note;size=27;align=left;spacingLeft=20;html=1;whiteSpace=wrap;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#F8FF33;sketch=1;fillWeight=1;hachureGap=2;jiggle=2;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="760" width="330" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="safe" value="REGRA DE SEGURANCA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#FFFFFF;strokeWidth=1;fontFamily=Architects Daughter;fontSize=13;fontStyle=1;fontColor=#FFFFFF;arcSize=21;sketch=1;fillWeight=3;hachureGap=3;jiggle=0.4;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="920" width="210" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="safe-note" value="Se backup, contexto ou validacao falham, o pipeline para sem update." style="shape=note;size=27;align=left;spacingLeft=20;html=1;whiteSpace=wrap;fontFamily=Architects Daughter;fontSize=16;strokeColor=#000000;strokeWidth=2;fillColor=#ffcccc;sketch=1;fillWeight=1;hachureGap=2;jiggle=2;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="970" width="330" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="input" target="config" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="config" target="fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fetch" target="detect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="sim" edge="1" parent="1" source="detect" target="skip-existing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#e51400;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="nao" edge="1" parent="1" source="detect" target="backup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="backup" target="sanitize" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="sanitize" target="context" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="context" target="context-file" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="nao" edge="1" parent="1" source="context-file" target="fail-context" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#e51400;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="sim" edge="1" parent="1" source="context-file" target="generate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="generate" target="validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="validate" target="approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="nao" edge="1" parent="1" source="approved" target="rejected" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#e51400;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="sim" edge="1" parent="1" source="approved" target="html" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="html" target="mode" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="nao" edge="1" parent="1" source="mode" target="dry-run" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="sim" edge="1" parent="1" source="mode" target="refetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="refetch" target="conflict" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#36393d;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" value="sim" edge="1" parent="1" source="conflict" target="fail-conflict" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#e51400;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" value="nao" edge="1" parent="1" source="conflict" target="update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSize=14;strokeColor=#006633;strokeWidth=2;sketch=1;jiggle=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

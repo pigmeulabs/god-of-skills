@@ -1,0 +1,18 @@
+{
+  "name": "uml",
+  "fontFamily": "Architects Daughter",
+  "fontSize": 14,
+  "grid": 10,
+  "spacing": {"shape": 40, "containerMargin": 30, "edgeClearance": 20},
+  "colors": {
+    "stroke": "#36393d",
+    "fill": "#cce5ff",
+    "font": "#1a1a1a",
+    "accent": "#0085fc",
+    "muted": "#e5e7eb"
+  },
+  "styleDefaults": {
+    "shape": "rounded=0;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;strokeColor=#36393d;fillColor=#cce5ff;fontColor=#1a1a1a;strokeWidth=2;sketch=1;",
+    "edge": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;strokeColor=#36393d;fontColor=#1a1a1a;strokeWidth=2;sketch=1;endArrow=open;"
+  }
+}

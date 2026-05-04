@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="component-snippets" name="component-snippets">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="callout-1" value="Nota de apoio" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=36;dy=21;boundedLbl=1;fontFamily=Architects Daughter;fontSize=16;rounded=1;shadow=1;sketch=1;fillWeight=2;hachureGap=3;jiggle=1.2;strokeColor=#36393d;strokeWidth=2;fillColor=#ffff88;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task-1" value="Validar documentos" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;strokeWidth=2;fillColor=#cce5ff;sketch=1;fillWeight=2;hachureGap=3;jiggle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway-1" value="Aprovado?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#1A1A1A;strokeWidth=2;fillColor=#ffff88;sketch=1;fillWeight=2;hachureGap=4;jiggle=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="70" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="note-1" value="MANDATORIO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#FFFFFF;strokeWidth=1;fontFamily=Architects Daughter;fontSize=13;fontStyle=1;fontColor=#FFFFFF;arcSize=21;sketch=1;fillWeight=3;hachureGap=3;jiggle=0.4;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="button-primary" value="Save" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0085FC;strokeColor=#36393d;strokeWidth=1;fontFamily=Architects Daughter;fontSize=13;fontColor=#FFFFFF;arcSize=12;sketch=1;hachureGap=3;jiggle=0.4;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="button-cancel" value="Cancel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF0000;strokeColor=#000000;strokeWidth=1;fontFamily=Architects Daughter;fontSize=13;fontColor=#FFFFFF;arcSize=12;sketch=1;hachureGap=3;jiggle=0.4;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

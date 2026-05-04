@@ -1,0 +1,22 @@
+{
+  "name": "bpmn",
+  "fontFamily": "Architects Daughter",
+  "fontSize": 16,
+  "grid": 10,
+  "spacing": {"shape": 60, "containerMargin": 50, "edgeClearance": 28},
+  "colors": {
+    "stroke": "#36393d",
+    "fill": "#ffff88",
+    "font": "#1a1a1a",
+    "accent": "#00FF00",
+    "muted": "#cce5ff",
+    "gateway": "#FFFF00",
+    "risk": "#FF0000"
+  },
+  "styleDefaults": {
+    "shape": "rounded=1;whiteSpace=wrap;html=1;fontFamily=Architects Daughter;fontSize=16;strokeColor=#36393d;fillColor=#ffff88;fontColor=#1a1a1a;strokeWidth=2;sketch=1;fillWeight=2;hachureGap=3;hachureAngle=132;jiggle=1.7;fillStyle=solid;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;arcSize=6;shadow=1;",
+    "edge": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;strokeColor=#36393d;fontColor=#1a1a1a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=1;endArrow=classic;endFill=1;",
+    "event": "shape=mxgraph.bpmn.event;html=1;aspect=fixed;fontFamily=Architects Daughter;fontSize=20;strokeColor=#006633;fillColor=#00FF00;strokeWidth=2;sketch=1;hachureGap=3;hachureAngle=132;jiggle=1.7;align=center;verticalAlign=middle;",
+    "gateway": "shape=mxgraph.bpmn.gateway2;html=1;aspect=fixed;fontFamily=Architects Daughter;fontSize=20;strokeColor=#1A1A1A;fillColor=#FFFF00;strokeWidth=2;sketch=1;hachureGap=3;hachureAngle=132;jiggle=1.7;align=center;verticalAlign=middle;"
+  }
+}
